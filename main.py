@@ -65,7 +65,7 @@ def cmd_start(message):
         if member.status not in ["member", "administrator", "creator"]:
     bot.reply_to(
         message,
-        f"Сначала подпишитесь на канал **{CHANNEL_NAME}**:\n{CHANNEL_LINK}\n\nПосле подписки напишите /start снова.",
+        f"Сначала подпишитесь на канал **{https://t.me/ordentes}**:\n{CHANNEL_LINK}\n\nПосле подписки напишите /start снова.",
         parse_mode="Markdown"
     )
     return
