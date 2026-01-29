@@ -63,8 +63,12 @@ def cmd_start(message):
     try:
         member = bot.get_chat_member(CHANNEL_ID, user_id)
         if member.status not in ["member", "administrator", "creator"]:
-            bot.reply_to(message, "Подпишитесь на наш канал сначала:\n" + https://t.me/ordentes + "\n\nПосле подписки напишите /start снова.")
-            return
+    bot.reply_to(
+        message,
+        f"Сначала подпишитесь на канал **{CHANNEL_NAME}**:\n{CHANNEL_LINK}\n\nПосле подписки напишите /start снова.",
+        parse_mode="Markdown"
+    )
+    return
     except Exception as e:
         bot.reply_to(message, "Не удалось проверить подписку. Попробуйте позже.")
         print("Ошибка проверки подписки:", e)
